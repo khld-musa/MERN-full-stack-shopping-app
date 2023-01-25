@@ -7,9 +7,6 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
-.App-1 {
-  margin-top: 55px;
-}
 
 /* Scroll Bar */
 
@@ -29,14 +26,24 @@ body {
   border-radius: 5px;
 }
 
-
+/* nav {
+  background-color: #232f3e;
+  padding: 1rem 1rem;
+} */
 
 #search_btn {
   background-color: #febd69;
 }
 
+.input-group {
+  width: 90%;
+  margin-right: 35%;
+}
 
-
+#search_field {
+  height: 2.4rem;
+  padding: 1rem;
+}
 
 #login_btn,
 #view_btn {
@@ -51,10 +58,10 @@ body {
 }
 
 #cart_count {
-  /* background-color: #febd69; */
-  /* padding: 0.2rem 0.5rem; */
+  background-color: #febd69;
+  padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
-  color: #febd69;
+  color: black;
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -290,7 +297,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
 
   font-weight: 700;
 }
@@ -491,7 +498,7 @@ footer {
 #sidebar {
   min-width: 100%;
   max-width: 100%;
-  background: #2d3743;
+  background: #232f3e;
   color: #fff;
   transition: all 0.3s;
 }
@@ -543,7 +550,7 @@ a[data-toggle='collapse'] {
 ul ul a {
   font-size: 1rem !important;
   padding-left: 30px !important;
-  background: #232f3e;
+  /* background: #232f3e; */
 }
 
 ul.CTAs {

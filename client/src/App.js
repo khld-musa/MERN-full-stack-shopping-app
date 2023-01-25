@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Header from './components/layout/Header'
+import NavBar from './components/layout/NavBar/NavBar'
 import Footer from './components/layout/Footer'
 
 import Home from './components/Home'
@@ -28,8 +28,6 @@ import ForgotPassword from './components/user/ForgotPassword'
 import NewPassword from './components/user/NewPassword'
 
 
-
-
 import ProtectedRoute from './components/route/ProtectedRoute'
 import { loadUser } from './actions/userActions'
 import { useSelector } from 'react-redux'
@@ -39,7 +37,6 @@ import axios from 'axios'
 // Payment
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import NavBar from './components/layout/NavBar/NavBar'
 
 function App() {
 
@@ -64,7 +61,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <div className="App-1 container container-fluid">
+        <div className="container container-fluid">
           <Route path="/" component={Home} exact />
           <Route path="/search/:keyword" component={Home} />
           <Route path="/product/:id" component={ProductDetails} exact />
@@ -90,6 +87,7 @@ function App() {
           <ProtectedRoute path="/orders/me" component={ListOrders} exact />
           <ProtectedRoute path="/order/:id" component={OrderDetails} exact />
         </div>
+
 
         {!loading && (!isAuthenticated || user.role !== 'admin') && (
           <Footer />

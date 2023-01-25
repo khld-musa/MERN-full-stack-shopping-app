@@ -84,7 +84,7 @@ const Cart = ({ history }) => {
                       </div>
 
                       <div className="col-5 col-lg-3">
-                        <Link to={`/products/${item.product}`}>
+                        <Link to={`/product/${item.product}`}>
                           {item.name}
                         </Link>
                       </div>

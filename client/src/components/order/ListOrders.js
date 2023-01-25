@@ -28,11 +28,11 @@ const ListOrders = () => {
     const setOrders = () => {
         const data = {
             columns: [
-                // {
-                //     label: 'Order ID',
-                //     field: 'id',
-                //     sort: 'asc'
-                // },
+                {
+                    label: 'Order ID',
+                    field: 'id',
+                    sort: 'asc'
+                },
                 {
                     label: 'Num of Items',
                     field: 'numOfItems',
@@ -59,7 +59,7 @@ const ListOrders = () => {
 
         orders.forEach(order => {
             data.rows.push({
-                // id: order._id,
+                id: order._id,
                 numOfItems: order.orderItems.length,
                 amount: `$${order.totalPrice}`,
                 status: order.orderStatus && String(order.orderStatus).includes('Delivered')
@@ -76,7 +76,7 @@ const ListOrders = () => {
     }
 
     return (
-        <Fragment className="container">
+        <Fragment>
 
             <MetaData title={'My Orders'} />
 

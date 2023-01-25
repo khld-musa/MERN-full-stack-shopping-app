@@ -46,7 +46,7 @@ const Login = ({ history, location }) => {
 
                     <div className="row wrapper">
                         <div className="col-10 col-lg-5">
-                            <form className="shadow" onSubmit={submitHandler}>
+                            <form className="shadow-lg" onSubmit={submitHandler}>
                                 <h1 className="mb-3">Login</h1>
                                 <div className="form-group">
                                     <label htmlFor="email_field">Email</label>
@@ -75,7 +75,7 @@ const Login = ({ history, location }) => {
                                 <button
                                     id="login_button"
                                     type="submit"
-                                    className="btn btn-block"
+                                    className="btn btn-block py-3"
                                 >
                                     LOGIN
                                 </button>
